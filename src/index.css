@@ -7,5 +7,5 @@ html{
 }
 
 .container{
-    @apply mx-auto px-4 sm:px-8 md:px-12 lg:px-16
+    @apply mx-auto px-4 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-xl
 }
