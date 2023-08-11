@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html{
-    @apply text-white bg-primary
+    @apply text-white bg-primary font-poppins
 }
 
 .container{
