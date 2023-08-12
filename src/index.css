@@ -4,12 +4,23 @@
 
 @layer base {
     html{
-        @apply text-white bg-primary font-poppins
+        @apply
+            text-white
+            bg-primary
+            font-poppins
+            overflow-x-hidden
     }
 }
 
 @layer utilities {
     .container{
-        @apply mx-auto px-4 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-xl
+        @apply
+            mx-auto
+            px-4
+            max-w-screen-sm
+            sm:max-w-screen-md
+            md:max-w-screen-lg
+            lg:max-w-screen-xl
+            xl:max-w-screen-xl
     }
 }
