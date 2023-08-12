@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    @apply text-white bg-primary font-poppins
+@layer base {
+    html{
+        @apply text-white bg-primary font-poppins
+    }
 }
 
-.container{
-    @apply mx-auto px-4 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-xl
+@layer utilities {
+    .container{
+        @apply mx-auto px-4 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-xl
+    }
 }
