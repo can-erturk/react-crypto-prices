@@ -24,3 +24,87 @@
             xl:max-w-screen-xl
     }
 }
+
+@layer components {
+    .navbar-btn{
+        @apply 
+            ml-2
+            text-white
+            bg-brand
+            py-2
+            px-4
+            rounded-md
+            flex
+            items-center
+            max-lg:ml-0
+            max-lg:p-2
+            max-lg:text-current
+            max-lg:bg-transparent
+    }
+
+    .mobile-sidebar{
+        @apply
+            flex
+            lg:gap-4
+            lg:items-center
+            max-lg:fixed
+            max-lg:-right-full
+            max-lg:top-0
+            max-lg:bg-[rgba(0,0,0,.9)]
+            max-lg:backdrop-blur-sm
+            max-lg:h-full
+            max-lg:flex-col
+            max-lg:z-50
+            max-lg:w-60
+            max-lg:justify-center
+            max-lg:items-start
+            max-lg:p-4
+            max-lg:transition-all
+    }
+
+    .mobile-sidebar a{
+        @apply
+            max-lg:w-full
+            max-lg:py-3
+    }
+    
+    .mobile-sidebar.sidebar-show{
+        @apply
+            max-lg:right-0
+    }
+    
+    .mobile-sidebar .sidebar-close{
+        @apply
+            lg:hidden
+            max-lg:absolute
+            max-lg:top-4
+            max-lg:right-3
+            max-lg:px-4
+            max-lg:py-3
+            max-lg:cursor-pointer
+            max-lg:text-white
+    }
+    
+    .sidebar-backdrop{
+        @apply
+            lg:hidden
+            max-lg:bg-[rgba(0,0,0,.45)]
+            max-lg:fixed
+            max-lg:top-0
+            max-lg:left-0
+            max-lg:right-0
+            max-lg:w-[100vw]
+            max-lg:h-[100vh]
+            max-lg:z-40
+            max-lg:transition-all
+            max-lg:opacity-0
+            max-lg:pointer-events-none
+    }
+    
+    .mobile-sidebar.sidebar-show + .sidebar-backdrop{
+        @apply
+            lg:hidden
+            max-lg:pointer-events-auto
+            max-lg:opacity-100
+    }
+}
