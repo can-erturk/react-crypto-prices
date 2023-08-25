@@ -10,8 +10,8 @@ function Hero() {
             The global market cap is <b className="font-semibold">$1.86T</b>
           </span>
         </div>
-        <div className="w-2/5 h-full flex justify-end max-lg:hidden">
-          <img src="/hero-illustration.png" className="w-full object-cover h-auto mt-4" />
+        <div className="w-2/5 h-full flex justify-center items-end max-lg:hidden">
+          <img src="/hero-image.png" className="h-[500px] w-auto" />
         </div>
       </div>
     </div>
