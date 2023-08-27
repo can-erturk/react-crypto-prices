@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    __dirname: true
+  },
   root: true,
   env: { browser: true, es2020: true },
   extends: [
