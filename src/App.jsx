@@ -2,6 +2,7 @@ import Header from "~/components/Header"
 import Hero from "~/components/Hero"
 import TopCoins from "~/components/TopCoins"
 import MarketUpdate from "~/components/MarketUpdate"
+import Footer from "~/components/Footer"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero></Hero>
       <TopCoins></TopCoins>
       <MarketUpdate></MarketUpdate>
+      <Footer></Footer>
     </>
   )
 }
