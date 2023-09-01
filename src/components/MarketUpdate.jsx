@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setPrices } from "~/stores/prices"
 import getPrices from "~/services/getPrices"
+import Table from "~/components/DataTable/Table"
 
 function MarketUpdate() {
 
@@ -16,8 +17,13 @@ function MarketUpdate() {
     fetchData()
   }, [dispatch])
 
+  const pricesData = useSelector((state) => state.crypto.prices)
+
   return (
-    <>Market Update</>
+    <div className="container pt-12 pb-16">
+      <h2 className="text-4xl font-semibold">Market Update</h2>
+      <Table data={pricesData} />
+    </div>
   )
 }
 
