@@ -17,12 +17,10 @@ function MarketUpdate() {
     fetchData()
   }, [dispatch])
 
-  const pricesData = useSelector((state) => state.crypto.prices)
-
   return (
     <div className="container pt-12 pb-16">
       <h2 className="text-4xl font-semibold">Market Update</h2>
-      <Table data={pricesData} />
+      <Table />
     </div>
   )
 }

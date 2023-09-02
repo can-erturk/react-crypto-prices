@@ -1,4 +1,4 @@
-function Table({ data }) {
+function Table() {
   return (
     <>
       Table
