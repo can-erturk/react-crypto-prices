@@ -1,14 +1,10 @@
+import changeClass from "~/helpers/changeClass"
+import slicedPercentage from "~/helpers/slicedPercentage"
+
 function TopCoinItem({ name, image, price, change }) {
 
-  let slicedChange = change.toString()
-  let changeColor = "text-red-500"
-
-  if (slicedChange.startsWith('-')) {
-    slicedChange = slicedChange.substr(0, 5)
-  } else {
-    slicedChange = slicedChange.substr(0, 4)
-    changeColor = "text-green-500"
-  }
+  const slicedChange = slicedPercentage(change)
+  const changeColor = changeClass(change)
 
   return (
     <div className="col-span-3 flex flex-col items-center">
