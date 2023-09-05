@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux"
 import TableItem from "~/components/DataTable/TableItem"
+import Pagination from "~/components/DataTable/Pagination"
 
 function Table() {
 
-  const prices = useSelector(state => state.crypto.prices)
+  const paginatedData = useSelector(state => state.table.paginatedData)
 
   return (
     <div>
@@ -17,7 +18,7 @@ function Table() {
           </tr>
         </thead>
         <tbody className="max-sm:flex max-sm:flex-col max-sm:gap-6 max-sm:mt-2">
-          {prices.map((coin, index) => (
+          {paginatedData.map((coin, index) => (
             <TableItem
               key={index}
               image={coin.image}
@@ -30,6 +31,7 @@ function Table() {
           ))}
         </tbody>
       </table>
+      <Pagination></Pagination>
     </div>
   )
 }
