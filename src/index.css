@@ -107,4 +107,46 @@
             max-lg:pointer-events-auto
             max-lg:opacity-100
     }
+
+    .table-title{
+        @apply
+            px-4
+            py-4
+            font-medium
+            text-left
+            text-lg
+    }
+
+    .table-item{
+        @apply
+            border-b
+            max-sm:border
+            border-zinc-800
+            max-sm:flex
+            max-sm:flex-col
+            max-sm:py-2
+    }
+
+    .table-item .table-item-col{
+        @apply
+            flex
+            flex-col
+            px-6
+            py-4
+            sm:table-cell
+            sm:py-8
+            lg:table-cell
+            text-left
+    }
+
+    .table-item .table-item-col[data-label]{
+        @apply
+            before:content-[attr(data-label)]
+            sm:before:content-none
+            before:text-xs
+            before:uppercase
+            before:text-zinc-400
+            before:block
+            before:mb-2
+    }
 }
