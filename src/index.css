@@ -136,7 +136,6 @@
             sm:table-cell
             sm:py-8
             lg:table-cell
-            text-left
     }
 
     .table-item .table-item-col[data-label]{

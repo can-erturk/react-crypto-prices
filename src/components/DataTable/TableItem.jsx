@@ -9,16 +9,16 @@ function TableItem({ image, symbol, name, price, change, marketCap }) {
 
   return (
     <tr className="table-item">
-      <td className="table-item-col">
+      <td className="table-item-col text-left">
         <AssetColumn image={image} name={name} symbol={symbol} />
       </td>
-      <td className="table-item-col" data-label="Current Price">
+      <td className="table-item-col text-left" data-label="Current Price">
         ${price}
       </td>
-      <td className={"table-item-col " + changeColor} data-label="24h Change">
+      <td className={"table-item-col text-left sm:text-right " + changeColor} data-label="24h Change">
         {slicedChange}%
       </td>
-      <td className="table-item-col" data-label="Market Cap">
+      <td className="table-item-col text-left sm:text-right" data-label="Market Cap">
         ${marketCap}
       </td>
     </tr>
