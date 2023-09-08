@@ -115,6 +115,22 @@
             font-medium
             text-left
             text-lg
+            border-l
+            border-zinc-800
+            border-t-0
+            cursor-pointer
+    }
+
+    .table-title:nth-of-type(1){
+        @apply
+            border-0
+    }
+
+    .table-title-inner{
+        @apply
+            flex
+            items-center
+            gap-2
     }
 
     .table-item{

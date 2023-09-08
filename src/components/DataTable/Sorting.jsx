@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { setCurrentPage, setSortConfig, setSortedData } from "~/stores/table"
+import SortingIcon from "~/components/DataTable/ui/SortingIcon"
 
 function Sorting() {
 
@@ -39,10 +40,30 @@ function Sorting() {
 
   return (
     <tr>
-      <th className="table-title sm:pl-6" onClick={() => requestSort('name')}>Asset</th>
-      <th className="table-title" onClick={() => requestSort('current_price')}>Current Price</th>
-      <th className="table-title sm:text-right sm:pr-6" onClick={() => requestSort('price_change_percentage_24h')}>24h %</th>
-      <th className="table-title sm:text-right sm:pr-6" onClick={() => requestSort('market_cap')}>Market Cap</th>
+      <th className="table-title sm:pl-6" onClick={() => requestSort('name')}>
+        <div className="table-title-inner">
+          <span>Asset</span>
+          <SortingIcon id="name" />
+        </div>
+      </th>
+      <th className="table-title" onClick={() => requestSort('current_price')}>
+        <div className="table-title-inner">
+          <span>Current Price</span>
+          <SortingIcon id="current_price" />
+        </div>
+      </th>
+      <th className="table-title sm:text-right sm:pr-6" onClick={() => requestSort('price_change_percentage_24h')}>
+        <div className="table-title-inner sm:justify-end">
+          <SortingIcon id="price_change_percentage_24h" />
+          <span>24h %</span>
+        </div>
+      </th>
+      <th className="table-title sm:text-right sm:pr-6" onClick={() => requestSort('market_cap')}>
+        <div className="table-title-inner sm:justify-end">
+          <SortingIcon id="market_cap" />
+          <span>Market Cap</span>
+        </div>
+      </th>
     </tr>
   )
 }
