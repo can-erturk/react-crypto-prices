@@ -164,4 +164,30 @@
             before:block
             before:mb-2
     }
+
+    .ascending-sort-icon{
+        @apply
+            relative
+            inline-block
+            before:content-['']
+            before:absolute
+            before:left-[2px]
+            before:w-[8px]
+            before:h-[20px]
+            before:bg-primary
+            before:opacity-70
+    }
+
+    .descending-sort-icon{
+        @apply
+            relative
+            inline-block
+            before:content-['']
+            before:absolute
+            before:right-[2px]
+            before:w-[8px]
+            before:h-[20px]
+            before:bg-primary
+            before:opacity-70
+    }
 }
