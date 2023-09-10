@@ -18,16 +18,19 @@ function Pagination() {
     dispatch(setPaginatedData(paginatedData))
   }, [dispatch, sortedData, currentPage])
 
+  const setPage = (page) => {
+    dispatch(setCurrentPage(page))
+  }
 
   const goToPrevPage = () => {
     if (currentPage > 1) {
-      dispatch(setCurrentPage(currentPage - 1))
+      setPage(currentPage - 1)
     }
   }
 
   const goToNextPage = () => {
     if (currentPage < Math.ceil(sortedData.length / itemsPerPage)) {
-      dispatch(setCurrentPage(currentPage + 1))
+      setPage(currentPage + 1)
     }
   }
 
