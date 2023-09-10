@@ -34,10 +34,15 @@ function Pagination() {
     }
   }
 
+  const disabledButtons = {
+    prev: currentPage != 1 ? false : true,
+    next: Math.ceil(sortedData.length / itemsPerPage) != currentPage ? false : true
+  }
+
   return (
     <div className="select-none flex justify-center pt-12 gap-3">
-      <button className="pagination-prev-btn" onClick={goToPrevPage}>Prev</button>
-      <button className="pagination-next-btn" onClick={goToNextPage}>Next</button>
+      <button className="pagination-prev-btn" disabled={disabledButtons.prev} onClick={goToPrevPage}>Prev</button>
+      <button className="pagination-next-btn" disabled={disabledButtons.next} onClick={goToNextPage}>Next</button>
     </div>
   )
 }
