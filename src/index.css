@@ -190,4 +190,16 @@
             before:bg-primary
             before:opacity-70
     }
+
+    .pagination-prev-btn,
+    .pagination-next-btn{
+        @apply
+            px-4
+            py-2
+            text-sm
+            bg-gray-700
+            disabled:opacity-50
+            disabled:cursor-not-allowed
+            rounded-lg
+    }
 }

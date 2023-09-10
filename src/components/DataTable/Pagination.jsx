@@ -32,9 +32,9 @@ function Pagination() {
   }
 
   return (
-    <div>
-      <button className="px-5 py-3 m-3 bg-gray-700" onClick={goToPrevPage}>Prev</button>
-      <button className="px-5 py-3 m-3 bg-gray-700" onClick={goToNextPage}>Next</button>
+    <div className="select-none flex justify-center pt-12 gap-3">
+      <button className="pagination-prev-btn" onClick={goToPrevPage}>Prev</button>
+      <button className="pagination-next-btn" onClick={goToNextPage}>Next</button>
     </div>
   )
 }
