@@ -6,22 +6,16 @@ function SortingIcon({ id }) {
   const sortConfig = useSelector(state => state.table.sortConfig)
 
   if (sortConfig.key === id) {
-    if (sortConfig.direction === "ascending") {
-      return (
-        <span className="ascending-sort-icon">
-          <BiSort size={20} />
-        </span>
-      )
-    } else {
-      return (
-        <span className="descending-sort-icon">
-          <BiSort size={20} />
-        </span>
-      )
-    }
-  } else {
-    return <BiSort className="opacity-30" size={20} />
+    const iconClass = sortConfig.direction === "ascending" ? "asc-icon" : "desc-icon"
+
+    return (
+      <span className={iconClass}>
+        <BiSort size={20} />
+      </span>
+    )
   }
+
+  return <BiSort className="opacity-30" size={20} />
 }
 
 export default SortingIcon

@@ -165,7 +165,7 @@
             before:mb-2
     }
 
-    .ascending-sort-icon{
+    .asc-icon{
         @apply
             relative
             inline-block
@@ -178,7 +178,7 @@
             before:opacity-70
     }
 
-    .descending-sort-icon{
+    .desc-icon{
         @apply
             relative
             inline-block
