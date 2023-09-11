@@ -1,15 +1,19 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { setCurrentPage, setPaginatedData } from "~/stores/table"
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa6"
 
 function Pagination() {
-
   const dispatch = useDispatch()
-  
-  const sortedData = useSelector(state => state.table.sortedData)
-  const currentPage = useSelector(state => state.table.currentPage)
-  const itemsPerPage = 10
 
+  // Get states
+  const { sortedData, currentPage } = useSelector(state => state.table)
+
+  // Default constants
+  const itemsPerPage = 10
+  const totalPages = Math.ceil(sortedData.length / itemsPerPage)
+
+  // Update paginated data when the current page changes
   useEffect(() => {
     const startIndex = (currentPage - 1) * itemsPerPage
     const endIndex = startIndex + itemsPerPage
@@ -18,31 +22,73 @@ function Pagination() {
     dispatch(setPaginatedData(paginatedData))
   }, [dispatch, sortedData, currentPage])
 
+  // Helper function to set the page
   const setPage = (page) => {
     dispatch(setCurrentPage(page))
   }
 
+  // Go to the previous page
   const goToPrevPage = () => {
     if (currentPage > 1) {
       setPage(currentPage - 1)
     }
   }
 
+  // Go to the next page
   const goToNextPage = () => {
-    if (currentPage < Math.ceil(sortedData.length / itemsPerPage)) {
+    if (currentPage < totalPages) {
       setPage(currentPage + 1)
     }
   }
 
+  // Create disabled attributes for buttons
   const disabledButtons = {
     prev: currentPage != 1 ? false : true,
-    next: Math.ceil(sortedData.length / itemsPerPage) != currentPage ? false : true
+    next: totalPages != currentPage ? false : true
+  }
+
+  // Default variables for pagination buttons
+  const paginationButtons = []
+  const maxButtonsToShow = 5
+  let startPage = 1
+  let endPage = totalPages
+
+  // Set the buttons to be displayed
+  if (totalPages > maxButtonsToShow) {
+    const halfButtons = Math.floor(maxButtonsToShow / 2)
+
+    if (currentPage <= halfButtons + 1) {
+      endPage = maxButtonsToShow
+    } else if (currentPage >= totalPages - halfButtons) {
+      startPage = totalPages - maxButtonsToShow + 1
+    } else {
+      startPage = currentPage - halfButtons
+      endPage = currentPage + halfButtons
+    }
+  }
+
+  // Generate the buttons to be displayed
+  for (let page = startPage; page <= endPage; page++) {
+    const isActive = currentPage === page ? "active" : ""
+
+    paginationButtons.push({ page, isActive })
   }
 
   return (
-    <div className="select-none flex justify-center pt-12 gap-3">
-      <button className="pagination-prev-btn" disabled={disabledButtons.prev} onClick={goToPrevPage}>Prev</button>
-      <button className="pagination-next-btn" disabled={disabledButtons.next} onClick={goToNextPage}>Next</button>
+    <div className="select-none flex justify-center pt-12 gap-2">
+      <button className="pagination-prev-btn" disabled={disabledButtons.prev} onClick={goToPrevPage}>
+        <FaAngleLeft />
+      </button>
+      <div className="flex gap-1 flex-wrap justify-center">
+        {paginationButtons.map(button => (
+          <button key={button.page} onClick={() => setPage(button.page)} className={button.isActive + " pagination-btn"}>
+            {button.page}
+          </button>
+        ))}
+      </div>
+      <button className="pagination-next-btn" disabled={disabledButtons.next} onClick={goToNextPage}>
+        <FaAngleRight />
+      </button>
     </div>
   )
 }
