@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 import TableItem from "~/components/DataTable/TableItem"
 import Pagination from "~/components/DataTable/Pagination"
 import Sorting from "~/components/DataTable/Sorting"
+import PageRows from "~/components/DataTable/RowsPerPage"
 
 function Table() {
   
@@ -10,6 +11,7 @@ function Table() {
 
   return (
     <div>
+      <PageRows></PageRows>
       <table className="w-full striped mt-6">
         <thead className="hidden border-b border-b-zinc-800 sm:table-header-group">
           <Sorting></Sorting>
