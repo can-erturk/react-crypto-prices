@@ -4,36 +4,44 @@ import { setCurrentPage, setSortConfig, setSortedData } from "~/stores/table"
 import SortingIcon from "~/components/DataTable/ui/SortingIcon"
 
 function Sorting() {
-
   const dispatch = useDispatch()
 
-  const prices = useSelector(state => state.crypto.prices)
-  const sortConfig = useSelector(state => state.table.sortConfig)
+  // Get states
+  const { prices } = useSelector(state => state.crypto)
+  const { sortConfig } = useSelector(state => state.table)
 
+  // Copy data for sorting
   const sortedData = [...prices]
   
+  // Perform sorting
   if (sortConfig.key) {
     sortedData.sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
+      const val1 = a[sortConfig.key]
+      const val2 = b[sortConfig.key]
+
+      if (val1 < val2) {
         return sortConfig.direction === 'ascending' ? -1 : 1
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
+      } else if (val1 > val2) {
         return sortConfig.direction === 'ascending' ? 1 : -1
+      } else {
+        return 0
       }
-      return 0
     })
   }
 
+  // Define a function for sorting
   const requestSort = (key) => {
     let direction = 'descending'
     if (sortConfig.key === key && sortConfig.direction === 'descending') {
       direction = 'ascending'
     }
 
+    // Update sorting configuration and reset the page number
     dispatch(setCurrentPage(1))
     dispatch(setSortConfig({ key, direction }))
   }
 
+  // Update sorted data when sort config changes
   useEffect(() => {
     dispatch(setSortedData(sortedData))
   }, [prices, sortConfig])

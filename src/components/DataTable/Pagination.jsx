@@ -6,7 +6,7 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa6"
 function Pagination() {
   const dispatch = useDispatch()
 
-  // Get states
+  // Get sortedData and currentPage states from the table store
   const { sortedData, currentPage } = useSelector(state => state.table)
 
   // Default constants

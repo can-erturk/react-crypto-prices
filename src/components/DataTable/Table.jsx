@@ -4,8 +4,9 @@ import Pagination from "~/components/DataTable/Pagination"
 import Sorting from "~/components/DataTable/Sorting"
 
 function Table() {
-
-  const paginatedData = useSelector(state => state.table.paginatedData)
+  
+  // Get paginatedData state from the table store
+  const { paginatedData } = useSelector(state => state.table)
 
   return (
     <div>
@@ -19,10 +20,10 @@ function Table() {
               key={index}
               image={coin.image}
               symbol={coin.symbol}
-              name={coin.name} 
-              price={coin.current_price} 
-              change={coin.price_change_percentage_24h} 
-              marketCap={coin.market_cap} 
+              name={coin.name}
+              price={coin.current_price}
+              change={coin.price_change_percentage_24h}
+              marketCap={coin.market_cap}
             />
           ))}
         </tbody>

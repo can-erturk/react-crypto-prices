@@ -3,7 +3,10 @@ import TopCoinItem from "~/components/ui/TopCoinItem"
 
 function TopCoins() {
 
-  const prices = useSelector((state) => state.crypto.prices)
+  // Get prices state from the crypto store
+  const { prices } = useSelector(state => state.crypto)
+
+  // Use only first 4 value of prices data
   const topCoins = prices.slice(0, 4)
   
   return (

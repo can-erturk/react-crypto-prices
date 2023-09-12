@@ -4,6 +4,7 @@ import AssetColumn from "~/components/DataTable/ui/AssetColumn"
 
 function TableItem({ image, symbol, name, price, change, marketCap }) {
 
+  // Generate new value and class for change
   const slicedChange = slicedPercentage(change)
   const changeColor = changeClass(change)
 
