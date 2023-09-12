@@ -30,7 +30,7 @@ function Table() {
         </tbody>
       </table>
       <div className="flex items-center justify-between pt-12">
-        <PageRows></PageRows>
+        <RowsPerPage></RowsPerPage>
         <Pagination></Pagination>
       </div>
     </div>

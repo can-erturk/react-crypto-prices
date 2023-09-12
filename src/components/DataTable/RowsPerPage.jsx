@@ -1,4 +1,4 @@
-function PageRows() {
+function RowsPerPage() {
   return (
     <>
       Rows Per Page
@@ -6,4 +6,4 @@ function PageRows() {
   )
 }
 
-export default PageRows
+export default RowsPerPage
