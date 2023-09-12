@@ -75,7 +75,7 @@ function Pagination() {
   }
 
   return (
-    <div className="select-none flex justify-center pt-12 gap-2">
+    <div className="select-none flex justify-center gap-2">
       <button className="pagination-prev-btn" disabled={disabledButtons.prev} onClick={goToPrevPage}>
         <FaAngleLeft />
       </button>

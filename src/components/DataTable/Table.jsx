@@ -11,7 +11,6 @@ function Table() {
 
   return (
     <div>
-      <PageRows></PageRows>
       <table className="w-full striped mt-6">
         <thead className="hidden border-b border-b-zinc-800 sm:table-header-group">
           <Sorting></Sorting>
@@ -30,7 +29,10 @@ function Table() {
           ))}
         </tbody>
       </table>
-      <Pagination></Pagination>
+      <div className="flex items-center justify-between pt-12">
+        <PageRows></PageRows>
+        <Pagination></Pagination>
+      </div>
     </div>
   )
 }
