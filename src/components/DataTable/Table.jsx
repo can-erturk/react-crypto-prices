@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import TableItem from "~/components/DataTable/TableItem"
 import Pagination from "~/components/DataTable/Pagination"
 import Sorting from "~/components/DataTable/Sorting"
-import PageRows from "~/components/DataTable/RowsPerPage"
+import RowsPerPage from "~/components/DataTable/RowsPerPage"
 
 function Table() {
   
