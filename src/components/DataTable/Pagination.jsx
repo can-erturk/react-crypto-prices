@@ -6,21 +6,20 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa6"
 function Pagination() {
   const dispatch = useDispatch()
 
-  // Get sortedData and currentPage states from the table store
-  const { sortedData, currentPage } = useSelector(state => state.table)
+  // Get states from the table store
+  const { sortedData, currentPage, itemsPerPage } = useSelector(state => state.table)
 
   // Default constants
-  const itemsPerPage = 10
   const totalPages = Math.ceil(sortedData.length / itemsPerPage)
 
-  // Update paginated data when the current page changes
+  // Update paginated data
   useEffect(() => {
     const startIndex = (currentPage - 1) * itemsPerPage
     const endIndex = startIndex + itemsPerPage
     const paginatedData = sortedData.slice(startIndex, endIndex)
 
     dispatch(setPaginatedData(paginatedData))
-  }, [dispatch, sortedData, currentPage])
+  }, [dispatch, sortedData, currentPage, itemsPerPage])
 
   // Helper function to set the page
   const setPage = (page) => {
