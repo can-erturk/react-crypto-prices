@@ -11,6 +11,7 @@ function Pagination() {
 
   // Default constants
   const totalPages = Math.ceil(sortedData.length / itemsPerPage)
+  const marketUpdate = document.getElementById('marketUpdate')
 
   // Update paginated data
   useEffect(() => {
@@ -21,9 +22,21 @@ function Pagination() {
     dispatch(setPaginatedData(paginatedData))
   }, [dispatch, sortedData, currentPage, itemsPerPage])
 
+  // Helper function to scroll to top the market update section
+  const scrollToMarketUpdate = () => {
+    window.scrollTo({
+      top: marketUpdate.offsetTop,
+      behavior: "smooth",
+    })
+  }
+
   // Helper function to set the page
   const setPage = (page) => {
+    // Set the new page
     dispatch(setCurrentPage(page))
+
+    // Scroll to top the market update section
+    scrollToMarketUpdate()
   }
 
   // Go to the previous page
