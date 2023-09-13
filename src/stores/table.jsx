@@ -5,6 +5,7 @@ const initialState = {
   sortConfig: { key: "market_cap", direction: 'desceding' },
   sortedData: [],
   paginatedData: [],
+  itemsPerPage: 10,
 }
 
 const table = createSlice({
@@ -23,6 +24,9 @@ const table = createSlice({
     setPaginatedData: (state, action) => {
       state.paginatedData = action.payload
     },
+    setItemsPerPage: (state, action) => {
+      state.itemsPerPage = action.payload
+    },
   },
 })
 
@@ -30,4 +34,5 @@ export const { setCurrentPage } = table.actions
 export const { setSortConfig } = table.actions
 export const { setSortedData } = table.actions
 export const { setPaginatedData } = table.actions
+export const { setItemsPerPage } = table.actions
 export default table.reducer
