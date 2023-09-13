@@ -220,4 +220,16 @@
         @apply
             bg-zinc-800
     }
+
+    .rows-select{
+        @apply
+            bg-zinc-800
+            text-sm 
+            border
+            border-zinc-700
+            p-2
+            rounded-lg
+            cursor-pointer
+            outline-none
+    }
 }

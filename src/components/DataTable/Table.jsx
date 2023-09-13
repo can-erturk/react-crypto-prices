@@ -29,7 +29,7 @@ function Table() {
           ))}
         </tbody>
       </table>
-      <div className="flex items-center justify-between pt-12">
+      <div className="flex items-center justify-between pt-12 max-sm:flex-col max-sm:gap-8">
         <RowsPerPage></RowsPerPage>
         <Pagination></Pagination>
       </div>
