@@ -12,7 +12,7 @@ function Header() {
       <div className="container h-full flex items-center justify-between">
         
         {/* Logo */}
-        <div className="text-3xl">
+        <div className="text-3xl mr-10">
           <span className="font-extralight">Mee</span><span className="font-semibold">Coin</span>
         </div>
         
