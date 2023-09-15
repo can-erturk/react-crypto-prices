@@ -135,12 +135,16 @@
 
     .table-item{
         @apply
-            border-b
-            max-sm:border
-            border-zinc-800
             max-sm:flex
             max-sm:flex-col
             max-sm:py-2
+    }
+
+    .table-item:not(:nth-last-of-type(1)){
+        @apply
+            border-b
+            max-sm:border
+            border-zinc-800
     }
 
     .table-item .table-item-col{
