@@ -6,9 +6,17 @@ function TopCoins() {
   // Get prices state from the crypto store
   const { prices } = useSelector(state => state.crypto)
 
-  // Use only first 4 value of prices data
-  const topCoins = prices.slice(0, 4)
-  
+  // Copy data for sorting
+  const sortedPrices = [...prices]
+
+  // Sort prices by change in descending
+  sortedPrices.sort((a, b) => {
+    return b.price_change_percentage_24h - a.price_change_percentage_24h
+  })
+
+  // Use only first 4 value of sorted data
+  const topCoins = sortedPrices.slice(0, 4)
+
   return (
     <div className="container py-14 overflow-hidden">
       <h2 className="text-4xl font-semibold">Top Coins</h2>
