@@ -10,16 +10,19 @@ function TopCoins() {
   const topCoins = prices.slice(0, 4)
   
   return (
-    <div className="container grid grid-cols-12 gap-6 py-14 max-sm:grid-cols-6 max-[340px]:grid-cols-3">
-      {topCoins.map((coin, index) => (
-        <TopCoinItem 
-          key={index}
-          name={coin.name}
-          image={coin.image}
-          price={coin.current_price}
-          change={coin.price_change_percentage_24h}
-        />
-      ))}
+    <div className="container py-14 overflow-hidden">
+      <h2 className="text-4xl font-semibold">Top Coins</h2>
+      <div className="grid grid-cols-12 gap-6 mt-6 max-lg:grid-cols-6 max-sm:grid-cols-3">
+        {topCoins.map((coin, index) => (
+          <TopCoinItem
+            key={index}
+            name={coin.name}
+            image={coin.image}
+            price={coin.current_price}
+            change={coin.price_change_percentage_24h}
+          />
+        ))}
+      </div>
     </div>
   )
 }

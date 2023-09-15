@@ -8,12 +8,14 @@ function TopCoinItem({ name, image, price, change }) {
   const changeColor = changeClass(change)
 
   return (
-    <div className="col-span-3 flex flex-col items-center">
-      <img src={image} className="w-24" />
-      <div className="font-semibold text-2xl mt-4">{name}</div>
-      <div className="flex gap-2 mt-2">
-        <span className="font-normal text-lg">${price}</span>
-        <span className={"font-normal text-lg " + changeColor}>{slicedChange}%</span>
+    <div className="col-span-3 bg-secondary rounded-lg shadow-xl py-8 pl-6 pr-2 flex items-center gap-4 overflow-hidden">
+      <img src={image} className="w-14 h-14" />
+      <div className="flex flex-col">
+        <div className="font-semibold text-2xl">{name}</div>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span>${price}</span>
+          <span className={changeColor}>{slicedChange}%</span>
+        </div>
       </div>
     </div>
   )
