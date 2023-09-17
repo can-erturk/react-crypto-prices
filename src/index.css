@@ -26,7 +26,15 @@
 }
 
 @layer components {
-    .navbar-btn{
+    .navbar{
+        @apply
+            flex
+            gap-4
+            items-center
+            max-lg:hidden
+    }
+
+    .header-btn{
         @apply 
             py-2
             px-4
@@ -44,68 +52,67 @@
 
     .mobile-sidebar{
         @apply
-            flex
-            lg:gap-4
-            lg:items-center
-            max-lg:fixed
-            max-lg:-right-full
-            max-lg:top-0
-            max-lg:bg-[rgba(0,0,0,.9)]
-            max-lg:backdrop-blur-sm
-            max-lg:h-full
-            max-lg:flex-col
-            max-lg:z-50
-            max-lg:w-60
-            max-lg:justify-center
-            max-lg:items-start
-            max-lg:p-4
-            max-lg:transition-all
+            lg:hidden
+            max-lg:flex
+            fixed
+            -right-full
+            top-0
+            bg-[rgba(52,51,51,0.9)]
+            backdrop-blur-sm
+            h-full
+            flex-col
+            z-50
+            w-60
+            justify-center
+            items-start
+            p-4
+            transition-all
     }
 
     .mobile-sidebar a{
         @apply
-            max-lg:w-full
-            max-lg:py-3
+            w-full
+            py-3
     }
     
     .mobile-sidebar.sidebar-show{
         @apply
-            max-lg:right-0
+            right-0
     }
     
     .mobile-sidebar .sidebar-close{
         @apply
             lg:hidden
-            max-lg:absolute
-            max-lg:top-4
-            max-lg:right-3
-            max-lg:px-4
-            max-lg:py-3
-            max-lg:cursor-pointer
-            max-lg:text-white
+            absolute
+            top-8
+            right-3
+            px-4
+            py-3
+            cursor-pointer
+            text-white
     }
     
     .sidebar-backdrop{
         @apply
             lg:hidden
-            max-lg:bg-[rgba(0,0,0,.45)]
-            max-lg:fixed
-            max-lg:top-0
-            max-lg:left-0
-            max-lg:right-0
-            max-lg:w-[100vw]
-            max-lg:h-[100vh]
-            max-lg:z-40
-            max-lg:transition-all
-            max-lg:opacity-0
-            max-lg:pointer-events-none
+            bg-[rgba(48,48,48,0.45)]
+            fixed
+            top-0
+            left-0
+            right-0
+            w-[100vw]
+            h-[100vh]
+            z-40
+            transition-all
+            opacity-0
+            pointer-events-none
     }
     
     .mobile-sidebar.sidebar-show + .sidebar-backdrop{
         @apply
             lg:hidden
-            max-lg:pointer-events-auto
-            max-lg:opacity-100
+            pointer-events-auto
+            opacity-100
     }
 
     .table-title{
