@@ -5,17 +5,14 @@ const initialState = {
 }
 
 const layout = createSlice({
-  name: "crypto",
+  name: "layout",
   initialState,
   reducers: {
-    openSidebar: state => {
-      state.sidebarOpen = true
-    },
-    closeSidebar: state => {
-      state.sidebarOpen = false
-    },
+    toggleSidebar: state => {
+      state.sidebarOpen = !state.sidebarOpen
+    }
   },
 })
 
-export const { openSidebar, closeSidebar } = layout.actions
+export const { toggleSidebar } = layout.actions
 export default layout.reducer
