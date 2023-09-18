@@ -4,7 +4,7 @@ import sidebarToggle from "~/helpers/sidebarToggle"
 
 function Header() {
   return (
-    <div className="bg-transparent absolute w-full h-28">
+    <div className="absolute w-full h-28 max-sm:h-20">
       <div className="container h-full flex items-center justify-between">
         
         {/* Logo */}
