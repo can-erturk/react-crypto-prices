@@ -18,20 +18,23 @@ function TopCoins() {
   const topCoins = sortedPrices.slice(0, 4)
 
   return (
-    <div className="container py-14 overflow-hidden">
-      <h2 className="text-4xl font-semibold">Top Coins</h2>
-      <div className="grid grid-cols-12 gap-6 mt-6 max-lg:grid-cols-6 max-sm:grid-cols-3">
-        {topCoins.map((coin, index) => (
-          <TopCoinItem
-            key={index}
-            name={coin.name}
-            image={coin.image}
-            price={coin.current_price}
-            change={coin.price_change_percentage_24h}
-          />
-        ))}
+    <section className="bg-secondary">
+      <div className="container overflow-hidden">
+        <h2 className="text-5xl font-normal text-center mb-6">Top Gainers</h2>
+        <p className="text-center max-w-xl m-auto mb-14 text-lg opacity-50">Below, you can see a list of a few of the most profitable cryptocurrency assets.</p>
+        <div className="grid grid-cols-12 gap-6 max-lg:grid-cols-6 max-sm:grid-cols-3">
+          {topCoins.map((coin, index) => (
+            <TopCoinItem
+              key={index}
+              name={coin.name}
+              image={coin.image}
+              price={coin.current_price}
+              change={coin.price_change_percentage_24h}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 
