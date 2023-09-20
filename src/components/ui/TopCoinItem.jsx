@@ -8,7 +8,7 @@ function TopCoinItem({ name, image, price, change }) {
   const changeColor = changeClass(change)
 
   return (
-    <div className="col-span-3 border-2 border-zinc-800 rounded-3xl py-8 pl-6 pr-2 flex items-center gap-4 overflow-hidden">
+    <div className="col-span-3 border border-default rounded-xl py-8 pl-6 pr-2 flex items-center gap-4 overflow-hidden">
       <img src={image} className="w-14 h-14" />
       <div className="flex flex-col">
         <div className="font-semibold text-2xl">{name}</div>
