@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import TopCoinItem from "~/components/ui/TopCoinItem"
+import SectionTitle from "~/components/ui/SectionTitle"
 
 function TopCoins() {
 
@@ -20,8 +21,12 @@ function TopCoins() {
   return (
     <section className="bg-secondary">
       <div className="container overflow-hidden">
-        <h2 className="text-5xl font-normal text-center mb-6">Top Gainers</h2>
-        <p className="text-center max-w-xl m-auto mb-14 text-lg opacity-50">Below, you can see a list of a few of the most profitable cryptocurrency assets.</p>
+        
+        <SectionTitle 
+          title="Top Gainers"  
+          description="Below, you can see a list of a few of the most profitable cryptocurrency assets."
+        />
+
         <div className="grid grid-cols-12 gap-6 max-lg:grid-cols-6 max-sm:grid-cols-3">
           {topCoins.map((coin, index) => (
             <TopCoinItem
