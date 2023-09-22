@@ -19,7 +19,7 @@ function MarketUpdate() {
   }, [dispatch])
 
   return (
-    <section>
+    <section id="market-update">
       <div className="container" id="marketUpdate">
 
         <SectionTitle

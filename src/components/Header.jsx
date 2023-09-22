@@ -43,7 +43,7 @@ function Header() {
         </nav>
         
         {/* Header button */}
-        <a href="#" className="header-btn">Get In Touch</a>
+        <a href="#download-now" className="header-btn">Download Now</a>
         
         {/* Mobile sidebar toggle */}
         <span className="lg:hidden px-3 py-4 cursor-pointer z-[60]" onClick={sidebarToggle}>

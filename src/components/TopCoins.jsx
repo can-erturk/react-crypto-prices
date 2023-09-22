@@ -19,7 +19,7 @@ function TopCoins() {
   const topCoins = sortedPrices.slice(0, 4)
 
   return (
-    <section className="bg-secondary">
+    <section className="bg-secondary" id="top-coins">
       <div className="container overflow-hidden">
         
         <SectionTitle 

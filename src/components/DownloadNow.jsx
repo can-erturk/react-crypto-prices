@@ -2,7 +2,7 @@ import SectionTitle from "./ui/SectionTitle"
 
 function DownloadNow() {
   return (
-    <section>
+    <section id="download-now">
       <div className="container">
 
         <SectionTitle
