@@ -150,7 +150,7 @@
             text-left
             text-lg
             border-l
-            border-zinc-800
+            border-default
             border-t-0
             cursor-pointer
     }
@@ -172,13 +172,8 @@
             max-sm:flex
             max-sm:flex-col
             max-sm:py-2
-    }
-
-    .table-item:not(:nth-last-of-type(1)){
-        @apply
-            border-b
             max-sm:border
-            border-zinc-800
+            max-sm:border-default
     }
 
     .table-item .table-item-col{

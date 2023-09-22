@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { setPrices } from "~/stores/prices"
 import getPrices from "~/services/getPrices"
 import Table from "~/components/DataTable/Table"
+import SectionTitle from "~/components/ui/SectionTitle"
 
 function MarketUpdate() {
 
@@ -18,10 +19,18 @@ function MarketUpdate() {
   }, [dispatch])
 
   return (
-    <div className="container pt-12 pb-16" id="marketUpdate">
-      <h2 className="text-4xl font-semibold">Market Update</h2>
-      <Table />
-    </div>
+    <section>
+      <div className="container" id="marketUpdate">
+
+        <SectionTitle
+          title="Market Update"
+          description="You can check out the latest data related to the cryptocurrency market in the list below."
+        />
+
+        <Table />
+
+      </div>
+    </section>
   )
 }
 
