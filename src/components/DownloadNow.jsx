@@ -7,7 +7,7 @@ function DownloadNow() {
 
         <SectionTitle
           title="Download Now"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor reprehenderit vitae, optio esse ducimus."
+          description="If you wish to download the app, you can start a subscription or try it for free with the buttons below."
         />
 
         <div className="flex max-sm:flex-col gap-4 justify-center items-center -mt-2 max-sm:-mt-6">
