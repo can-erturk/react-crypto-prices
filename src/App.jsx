@@ -4,6 +4,7 @@ import TopCoins from "~/components/TopCoins"
 import MarketUpdate from "~/components/MarketUpdate"
 import Footer from "~/components/Footer"
 import Sidebar from "~/components/Sidebar"
+import MarketStatistics from "~/components/MarketStatistics"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero></Hero>
       <TopCoins></TopCoins>
       <MarketUpdate></MarketUpdate>
+      <MarketStatistics></MarketStatistics>
       <Footer></Footer>
     </>
   )
