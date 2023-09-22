@@ -34,6 +34,30 @@
 }
 
 @layer components {
+    .header{
+        @apply
+            fixed
+            top-0
+            w-full
+            h-28
+            max-sm:h-20
+            z-50
+            transition-[height]
+            bg-[rgba(0,0,0,.65)]
+    }
+
+    .header.sticky-header{
+        @apply
+            border-b
+            border-default
+            h-16
+            max-sm:h-14
+            backdrop-filter
+            backdrop-saturate-150
+            backdrop-blur-sm
+            shadow-2xl
+    }
+
     .navbar{
         @apply
             flex
@@ -88,7 +112,7 @@
             backdrop-blur-sm
             h-full
             flex-col
-            z-50
+            z-[150]
             w-60
             justify-center
             items-start
@@ -129,7 +153,7 @@
             right-0
             w-[100vw]
             h-[100vh]
-            z-40
+            z-[140]
             transition-all
             opacity-0
             pointer-events-none
