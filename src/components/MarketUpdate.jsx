@@ -20,7 +20,7 @@ function MarketUpdate() {
 
   return (
     <section id="market-update">
-      <div className="container" id="marketUpdate">
+      <div className="container">
 
         <SectionTitle
           title="Market Update"

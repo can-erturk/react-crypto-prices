@@ -10,7 +10,7 @@ function Table() {
   const { paginatedData } = useSelector(state => state.table)
 
   return (
-    <div>
+    <div id="marketUpdate">
       <div className="bg-primary sm:border sm:border-default sm:rounded-xl sm:overflow-hidden">
         <table className="w-full striped">
           <thead className="hidden border-b border-default sm:table-header-group">

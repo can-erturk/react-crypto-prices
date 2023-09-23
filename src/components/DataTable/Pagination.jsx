@@ -25,7 +25,7 @@ function Pagination() {
   // Helper function to scroll to top the market update section
   const scrollToMarketUpdate = () => {
     window.scrollTo({
-      top: marketUpdate.offsetTop,
+      top: marketUpdate.offsetTop - 80,
       behavior: "smooth",
     })
   }
