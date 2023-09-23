@@ -6,7 +6,7 @@ function Hero() {
           <h1 className="flex-grow font-medium">
             Today&apos;s Cryptocurrency Prices
           </h1>
-          <span className="text-gray-400 text-2xl block mt-3 max-lg:text-lg max-sm:text-sm">
+          <span className="text-gray-400 text-2xl block mt-3 max-lg:text-lg max-sm:text-base">
             The global market cap is <b className="font-semibold">$1.02T</b>
           </span>
           <a href="#market-update" className="hero-btn">Take a Look</a>

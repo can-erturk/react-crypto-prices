@@ -21,13 +21,13 @@ function MarketStatistics() {
       
         {statisticItems.map((item, index) => (
           <div key={index} className="statistic-item">
-            <div className="text-4xl font-semibold">{item.value}</div>
-            <div className="text-lg opacity-50 ">{item.title}</div>
+            <div className="text-4xl font-semibold max-sm:text-2xl">{item.value}</div>
+            <div className="text-lg opacity-50 max-sm:text-base">{item.title}</div>
           </div>
         ))}
 
         <div className="col-span-3 sm:border-l sm:border-default flex items-center justify-center max-sm:mt-12">
-          <a href="https://tradingview.com" target="_blank" className="text-center text-2xl font-medium max-w-[150px]">See More on Tradingview</a>
+          <a href="https://tradingview.com" target="_blank" className="text-center text-2xl max-sm:text-xl font-medium max-w-[150px]">See More on Tradingview</a>
         </div>
       </div>
     </section>

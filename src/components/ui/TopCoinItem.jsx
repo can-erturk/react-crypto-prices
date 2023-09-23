@@ -11,7 +11,7 @@ function TopCoinItem({ name, image, price, change }) {
     <div className="col-span-3 border border-default rounded-xl py-8 pl-6 pr-2 flex items-center gap-4 overflow-hidden">
       <img src={image} className="w-14 h-14" />
       <div className="flex flex-col">
-        <div className="font-semibold text-2xl">{name}</div>
+        <div className="font-semibold text-2xl max-sm:text-lg">{name}</div>
         <div className="flex flex-wrap gap-2 mt-2">
           <span>${price}</span>
           <span className={changeColor}>{slicedChange}%</span>
