@@ -5,7 +5,7 @@ const baseURL = "https://api.coingecko.com/api/v3"
 const api = axios.create({ baseURL })
 
 // A variable used to show error message only once
-let apiErrorShown = false
+let apiErrorShown = JSON.parse(localStorage.getItem("apiErrorShown")) || false
 
 // Error handling function
 function handleError(error) {

@@ -7,7 +7,7 @@ const apiError = () => toast.error(
     <span className="text-sm">Outdated data is being displayed due to an invalid response from the API.</span>
     <div className="text-xs">
       <span>Error code: 429</span>
-      <button className="toast-btn">Dont show again</button>
+      <button className="toast-btn" onClick={() => localStorage.setItem("apiErrorShown", true)}>Dont show again</button>
     </div>
   </span>
 )
