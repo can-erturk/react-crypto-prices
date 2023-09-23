@@ -19,6 +19,21 @@
             py-32
             max-sm:py-24
     }
+
+    h1{
+        @apply
+            text-7xl
+            max-lg:text-5xl
+            max-sm:text-[clamp(8dvw,26px,48px)]
+            
+    }
+
+    h2{
+        @apply
+            text-5xl
+            max-lg:text-4xl
+            max-sm:text-[clamp(6.5dvw,22px,36px)]
+    }
 }
 
 @layer utilities {
