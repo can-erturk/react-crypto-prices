@@ -9,7 +9,7 @@ function Hero() {
           <span className="text-gray-400 text-2xl block mt-3 max-lg:text-lg max-sm:text-sm">
             The global market cap is <b className="font-semibold">$1.02T</b>
           </span>
-          <a href="#" className="hero-btn">Take a Look</a>
+          <a href="#market-update" className="hero-btn">Take a Look</a>
         </div>
       </div>
     </div>
