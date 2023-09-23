@@ -6,6 +6,8 @@ import Footer from "~/components/Footer"
 import Sidebar from "~/components/Sidebar"
 import MarketStatistics from "~/components/MarketStatistics"
 import DownloadNow from "~/components/DownloadNow"
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
@@ -18,6 +20,13 @@ function App() {
       <MarketStatistics></MarketStatistics>
       <DownloadNow></DownloadNow>
       <Footer></Footer>
+
+      <ToastContainer
+        hideProgressBar={true}
+        newestOnTop
+        theme="dark"
+        position="top-right"
+      />
     </>
   )
 }
