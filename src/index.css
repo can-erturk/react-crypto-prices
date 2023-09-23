@@ -320,4 +320,16 @@
             max-sm:border-none
             py-4
     }
+
+    .toast-btn{
+        @apply
+            border
+            border-default
+            py-2
+            px-4
+            mt-4
+            ml-4
+            rounded-md
+            hover:bg-zinc-800
+    }
 }
