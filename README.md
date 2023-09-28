@@ -1,5 +1,5 @@
-# React Blog Template
-Crypto Price Tracking Website with React + Redux Toolkit + Tailwind
+# React Crypto Prices
+Crypto price tracking website with React + Redux Toolkit + Tailwind
 
 ## See Demo:
 https://meecoin.vercel.app/
