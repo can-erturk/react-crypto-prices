@@ -1,3 +1,5 @@
+import { FaAngleRight } from "react-icons/fa"
+
 function Hero() {
   return (
     <div className="h-[700px] max-lg:h-[550px] max-sm:h-[90dvh] pt-28 max-sm:pt-20 pb-20 max-lg:pb-16 max-sm:pb-10 border-b border-default">
@@ -6,10 +8,13 @@ function Hero() {
           <h1 className="flex-grow font-medium">
             Today&apos;s Cryptocurrency Prices
           </h1>
-          <span className="text-gray-400 text-2xl block mt-3 max-lg:text-lg max-sm:text-base">
+          <span className="text-gray-400 text-2xl block mt-4 max-lg:text-lg max-sm:text-base">
             The global market cap is <b className="font-semibold">$1.02T</b>
           </span>
-          <a href="#market-update" className="hero-btn">Take a Look</a>
+          <a href="#market-update" className="hero-btn">
+            <span>Take a Look</span>
+            <FaAngleRight className="ml-2 -mr-2 mt-[1px]" size={14} />
+          </a>
         </div>
       </div>
     </div>

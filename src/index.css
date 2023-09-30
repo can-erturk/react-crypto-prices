@@ -116,13 +116,14 @@
 
     .hero-btn{
         @apply
-            block
+            flex
+            items-center
             max-w-max
             mx-auto
             mt-10
-            text-lg
-            bg-brand
-            text-white
+            text-base
+            bg-white
+            text-black
             font-medium
             py-3
             px-8
