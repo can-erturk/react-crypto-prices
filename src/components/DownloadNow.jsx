@@ -1,5 +1,6 @@
 import showToast from "~/helpers/showToast"
 import SectionTitle from "./ui/SectionTitle"
+import { FaAngleRight } from "react-icons/fa"
 
 function DownloadNow() {
 
@@ -16,8 +17,14 @@ function DownloadNow() {
         />
 
         <div className="flex max-sm:flex-col gap-4 justify-center items-center -mt-2 max-sm:-mt-6">
-          <button className="bg-brand py-3 px-6 rounded-full font-medium" onClick={demoAlertHandler}>Start Subscription</button>
-          <button className="font-medium py-3 px-6" onClick={demoAlertHandler}>Try for free</button>
+          <button className="flex items-center font-medium bg-white text-black py-3 px-8 rounded-full max-lg:py-2 max-lg:px-4 max-lg:text-sm" onClick={demoAlertHandler}>
+            <span>Start Subscription</span>
+            <FaAngleRight className="ml-2 -mr-2 mt-[1px]" size={14} />
+          </button>
+          <button className="flex items-center font-medium py-3 px-8 border border-[#99999960] rounded-full max-lg:py-2 max-lg:px-4 max-lg:text-sm" onClick={demoAlertHandler}>
+            <span>Try for Free</span>
+            <FaAngleRight className="ml-2 -mr-2 mt-[1px]" size={14} />
+          </button>
         </div>
 
       </div>
