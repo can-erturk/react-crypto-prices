@@ -21,7 +21,7 @@ function MarketStatistics() {
       
         {statisticItems.map((item, index) => (
           <div key={index} className="statistic-item">
-            <div className="text-4xl font-semibold max-sm:text-2xl">{item.value}</div>
+            <div className="text-4xl font-semibold max-sm:text-2xl gradient-text">{item.value}</div>
             <div className="text-lg opacity-50 max-sm:text-base">{item.title}</div>
           </div>
         ))}

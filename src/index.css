@@ -34,6 +34,16 @@
             max-lg:text-4xl
             max-sm:text-[clamp(6.5dvw,22px,36px)]
     }
+
+    
+    h1, h2, h3, h4, h5, h6, .gradient-text{
+        @apply
+            bg-gradient-to-br
+            from-white
+            to-[rgba(255,255,255,.55)]
+            bg-clip-text
+            text-transparent
+    }
 }
 
 @layer utilities {
