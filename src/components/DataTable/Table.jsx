@@ -3,11 +3,13 @@ import TableItem from "~/components/DataTable/TableItem"
 import Pagination from "~/components/DataTable/Pagination"
 import Sorting from "~/components/DataTable/Sorting"
 import RowsPerPage from "~/components/DataTable/RowsPerPage"
+import Preloader from "~/components/ui/Preloader"
 
 function Table() {
   
-  // Get paginatedData state from the table store
+  // Get states
   const { paginatedData } = useSelector(state => state.table)
+  const { loading } = useSelector(state => state.crypto)
 
   return (
     <div id="marketUpdate">
@@ -30,6 +32,13 @@ function Table() {
             ))}
           </tbody>
         </table>
+        
+        {/* Show preloader if data pending */}
+        {loading && (
+          <div className="h-80 w-full flex items-center justify-center">
+            <Preloader />
+          </div>
+        )}
       </div>
       <div className="flex items-center justify-between pt-12 max-sm:flex-col max-sm:gap-8">
         <RowsPerPage></RowsPerPage>
