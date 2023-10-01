@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux"
 import TopCoinItem from "~/components/ui/TopCoinItem"
 import SectionTitle from "~/components/ui/SectionTitle"
+import Preloader from "~/components/ui/Preloader"
 
 function TopCoins() {
 
   // Get prices state from the crypto store
   const { prices } = useSelector(state => state.crypto)
+  const { loading } = useSelector(state => state.crypto)
 
   // Copy data for sorting
   const sortedPrices = [...prices]
@@ -28,6 +30,14 @@ function TopCoins() {
         />
 
         <div className="grid grid-cols-12 gap-6 max-lg:grid-cols-6 max-sm:grid-cols-3">
+
+          {/* Show preloader if data pending */}
+          {loading && (
+            <div className="col-span-12 flex items-center justify-center mt-8">
+              <Preloader />
+            </div>
+          )}
+
           {topCoins.map((coin, index) => (
             <TopCoinItem
               key={index}
