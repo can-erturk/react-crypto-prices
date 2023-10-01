@@ -4,6 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import showToast from "~/helpers/showToast"
 
 const initialState = {
+  loading: false,
   prices: [],
 }
 
@@ -37,8 +38,13 @@ const prices = createSlice({
   reducers: {},
   extraReducers: builder => {
 
+    builder.addCase(setPricesThunk.pending, state => {
+      state.loading = true
+    })
+
     builder.addCase(setPricesThunk.fulfilled, (state, action) => {
       state.prices = action.payload
+      state.loading = false
     })
   },
 })
