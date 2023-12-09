@@ -2,7 +2,7 @@
 Crypto price tracking website with React + Redux Toolkit + Tailwind
 
 ## See Demo:
-https://meecoin.vercel.app/
+https://meecoin.netlify.app/
 
 ## Preview
 ![React crypto price tracking website preview](public/preview.png)
