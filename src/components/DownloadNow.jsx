@@ -8,8 +8,9 @@ function DownloadNow() {
   const demoAlertHandler = () => showToast.demoAlert()
 
   return (
-    <section id="download-now">
-      <div className="container">
+    <section id="download-now" className="py-0">
+      {/* <div className="container"> */}
+      <div className="container overflow-hidden rounded-3xl py-44 max-sm:py-24 border-none border-default relative">
 
         <SectionTitle
           title="Download Now"

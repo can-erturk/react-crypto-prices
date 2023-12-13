@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { setPricesThunk } from "~/stores/prices"
 import Table from "~/components/DataTable/Table"
 import SectionTitle from "~/components/ui/SectionTitle"
+import SectionVideo from "~/components/ui/SectionVideo"
 
 function MarketUpdate() {
 
@@ -14,8 +15,9 @@ function MarketUpdate() {
   }, [dispatch])
 
   return (
-    <section id="market-update">
-      <div className="container">
+    <section id="market-update" className="border-none py-0">
+      <div className="container overflow-hidden rounded-3xl py-28 max-sm:py-24 pb-44 border-none border-default relative">
+        <SectionVideo src="/videos/react.mp4" />
 
         <SectionTitle
           title="Market Update"

@@ -7,8 +7,8 @@ function Footer() {
   const demoAlertHandler = () => showToast.demoAlert()
 
   return (
-    <div className="bg-secondary">
-      <div className="container pt-12 pb-12 flex flex-col items-center gap-2">
+    <>
+      <div className="container py-16 flex flex-col items-center gap-2">
         <div className="flex items-center gap-2">
           <a className="inline-block p-2 transition-all hover:text-[#179cf0] cursor-pointer" onClick={demoAlertHandler}><FaTwitter size={30} /></a>
           <a className="inline-block p-2 transition-all hover:text-[#5865f2] cursor-pointer" onClick={demoAlertHandler}><FaDiscord size={34} /></a>
@@ -20,7 +20,7 @@ function Footer() {
           <a className="inline-block p-2 opacity-60 hover:underline cursor-pointer" onClick={demoAlertHandler}>Privacy Policy</a>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

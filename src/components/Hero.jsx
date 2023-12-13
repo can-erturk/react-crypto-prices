@@ -1,8 +1,11 @@
 import { FaAngleRight } from "react-icons/fa"
+import HeroBg from "~/components/ui/HeroBg"
 
 function Hero() {
   return (
-    <div className="h-[700px] max-lg:h-[550px] max-sm:h-[90dvh] pt-28 max-sm:pt-20 pb-20 max-lg:pb-16 max-sm:pb-10 border-b border-default">
+    <div className="h-[750px] max-lg:h-[550px] max-sm:h-[90dvh] pt-28 max-sm:pt-20 pb-28 max-lg:pb-16 max-sm:pb-10 relative overflow-hidden">
+      <HeroBg />
+
       <div className="container h-full relative flex flex-wrap items-center justify-between overflow-hidden">
         <div className="lg:w-2/3 text-center m-auto">
           <h1 className="flex-grow font-medium">
