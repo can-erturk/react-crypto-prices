@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { setCurrentPage, setItemsPerPage } from "~/stores/table"
+import { scrollToTable } from "~/helpers/scrollToTable"
 
 function RowsPerPage() {
 
@@ -9,6 +10,9 @@ function RowsPerPage() {
   const { itemsPerPage } = useSelector(state => state.table)
 
   const setNewItems = (val) => {
+    // Scroll to top the market update section
+    scrollToTable()
+
     // Reset the page number
     dispatch(setCurrentPage(1))
 
