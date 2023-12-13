@@ -16,7 +16,7 @@ function MarketUpdate() {
 
   return (
     <section id="market-update" className="border-none py-0">
-      <div className="container overflow-hidden rounded-3xl py-28 max-sm:py-24 pb-44 border-none border-default relative">
+      <div className="container overflow-hidden rounded-3xl py-28 max-sm:py-12 pb-44 border-none border-default relative">
         <SectionVideo src="/videos/react.mp4" />
 
         <SectionTitle

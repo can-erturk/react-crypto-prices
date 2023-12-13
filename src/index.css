@@ -51,6 +51,7 @@
             mx-auto
             xl:px-32
             max-xl:px-4
+            max-sm:px-6
             max-w-screen-sm
             sm:max-w-screen-md
             md:max-w-screen-lg
@@ -243,6 +244,7 @@
             max-sm:py-2
             max-sm:border
             max-sm:border-default
+            max-sm:rounded-3xl
     }
 
     .table-item .table-item-col{
