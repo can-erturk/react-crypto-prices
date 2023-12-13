@@ -1,12 +1,11 @@
-import { FaXmark } from "react-icons/fa6"
-import Navigation from "~/components/ui/Navigation"
-import sidebarToggle from "~/helpers/sidebarToggle"
+import { FaXmark } from 'react-icons/fa6'
+import Navigation from '~/components/ui/Navigation'
+import sidebarToggle from '~/helpers/sidebarToggle'
 
 function Sidebar() {
   return (
     <>
       <aside className="mobile-sidebar">
-
         {/* Sidebar close */}
         <span className="sidebar-close" onClick={sidebarToggle}>
           <FaXmark size={20} />

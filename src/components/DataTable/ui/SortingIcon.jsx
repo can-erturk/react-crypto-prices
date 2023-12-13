@@ -1,13 +1,13 @@
-import { BiSort } from "react-icons/bi"
-import { useSelector } from "react-redux"
+import { BiSort } from 'react-icons/bi'
+import { useSelector } from 'react-redux'
 
 function SortingIcon({ id }) {
-
   // Get sortConfig state from table store
-  const { sortConfig } = useSelector(state => state.table)
+  const { sortConfig } = useSelector((state) => state.table)
 
   if (sortConfig.key === id) {
-    const iconClass = sortConfig.direction === "ascending" ? "asc-icon" : "desc-icon"
+    const iconClass =
+      sortConfig.direction === 'ascending' ? 'asc-icon' : 'desc-icon'
 
     // Conditional rendering based on the sorting key
     return (

@@ -1,14 +1,16 @@
-import { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
-import { setCurrentPage, setPaginatedData } from "~/stores/table"
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa6"
-import { scrollToTable } from "~/helpers/scrollToTable"
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { setCurrentPage, setPaginatedData } from '~/stores/table'
+import { FaAngleRight, FaAngleLeft } from 'react-icons/fa6'
+import { scrollToTable } from '~/helpers/scrollToTable'
 
 function Pagination() {
   const dispatch = useDispatch()
 
   // Get states from the table store
-  const { sortedData, currentPage, itemsPerPage } = useSelector(state => state.table)
+  const { sortedData, currentPage, itemsPerPage } = useSelector(
+    (state) => state.table,
+  )
 
   // Default constants
   const totalPages = Math.ceil(sortedData.length / itemsPerPage)
@@ -45,7 +47,7 @@ function Pagination() {
   // Create disabled attributes for buttons
   const disabledButtons = {
     prev: currentPage != 1 ? false : true,
-    next: totalPages != currentPage ? false : true
+    next: totalPages != currentPage ? false : true,
   }
 
   // Default variables for pagination buttons
@@ -70,24 +72,36 @@ function Pagination() {
 
   // Generate the buttons to be displayed
   for (let page = startPage; page <= endPage; page++) {
-    const isActive = currentPage === page ? "active" : ""
+    const isActive = currentPage === page ? 'active' : ''
 
     paginationButtons.push({ page, isActive })
   }
 
   return (
     <div className="select-none flex justify-center gap-2 order-2 max-sm:order-1">
-      <button className="pagination-prev-btn" disabled={disabledButtons.prev} onClick={goToPrevPage}>
+      <button
+        className="pagination-prev-btn"
+        disabled={disabledButtons.prev}
+        onClick={goToPrevPage}
+      >
         <FaAngleLeft />
       </button>
       <div className="flex gap-1 flex-wrap justify-center">
-        {paginationButtons.map(button => (
-          <button key={button.page} onClick={() => setPage(button.page)} className={button.isActive + " pagination-btn"}>
+        {paginationButtons.map((button) => (
+          <button
+            key={button.page}
+            onClick={() => setPage(button.page)}
+            className={button.isActive + ' pagination-btn'}
+          >
             {button.page}
           </button>
         ))}
       </div>
-      <button className="pagination-next-btn" disabled={disabledButtons.next} onClick={goToNextPage}>
+      <button
+        className="pagination-next-btn"
+        disabled={disabledButtons.next}
+        onClick={goToNextPage}
+      >
         <FaAngleRight />
       </button>
     </div>

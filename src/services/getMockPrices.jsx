@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from 'axios'
 
 async function getMockPrices() {
   const response = await axios.get('/data.json')

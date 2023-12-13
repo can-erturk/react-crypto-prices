@@ -1,15 +1,14 @@
-import { useSelector } from "react-redux"
-import TableItem from "~/components/DataTable/TableItem"
-import Pagination from "~/components/DataTable/Pagination"
-import Sorting from "~/components/DataTable/Sorting"
-import RowsPerPage from "~/components/DataTable/RowsPerPage"
-import Preloader from "~/components/ui/Preloader"
+import { useSelector } from 'react-redux'
+import TableItem from '~/components/DataTable/TableItem'
+import Pagination from '~/components/DataTable/Pagination'
+import Sorting from '~/components/DataTable/Sorting'
+import RowsPerPage from '~/components/DataTable/RowsPerPage'
+import Preloader from '~/components/ui/Preloader'
 
 function Table() {
-  
   // Get states
-  const { paginatedData } = useSelector(state => state.table)
-  const { loading } = useSelector(state => state.crypto)
+  const { paginatedData } = useSelector((state) => state.table)
+  const { loading } = useSelector((state) => state.crypto)
 
   return (
     <div id="marketUpdate">
@@ -32,7 +31,7 @@ function Table() {
             ))}
           </tbody>
         </table>
-        
+
         {/* Show preloader if data pending */}
         {loading && (
           <div className="h-80 w-full flex items-center justify-center">

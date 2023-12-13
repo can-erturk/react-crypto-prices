@@ -3,359 +3,142 @@
 @tailwind utilities;
 
 @layer base {
-    html{
-        @apply
-            text-white
-            bg-primary
-            font-poppins
-            overflow-x-hidden
-            scroll-smooth
-    }
+  html {
+    @apply text-white bg-primary font-poppins overflow-x-hidden scroll-smooth;
+  }
 
-    section{
-        @apply
-            border-b
-            border-default
-            py-32
-            max-sm:py-24
-    }
+  section {
+    @apply border-b border-default py-32 max-sm:py-24;
+  }
 
-    h1{
-        @apply
-            text-6xl
-            max-lg:text-5xl
-            max-sm:text-[clamp(8dvw,26px,48px)]
-            
-    }
+  h1 {
+    @apply text-6xl max-lg:text-5xl max-sm:text-[clamp(8dvw,26px,48px)];
+  }
 
-    h2{
-        @apply
-            text-5xl
-            max-lg:text-4xl
-            max-sm:text-[clamp(6.5dvw,22px,36px)]
-    }
+  h2 {
+    @apply text-5xl max-lg:text-4xl max-sm:text-[clamp(6.5dvw,22px,36px)];
+  }
 
-    h1, h2, h3, h4, h5, h6, .gradient-text{
-        @apply
-            bg-gradient-to-br
-            from-white
-            to-[rgba(255,255,255,.55)]
-            bg-clip-text
-            text-transparent
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .gradient-text {
+    @apply bg-gradient-to-br from-white to-[rgba(255,255,255,.55)] bg-clip-text text-transparent;
+  }
 }
 
 @layer utilities {
-    .container{
-        @apply
-            mx-auto
-            xl:px-32
-            max-xl:px-4
-            max-sm:px-6
-            max-w-screen-sm
-            sm:max-w-screen-md
-            md:max-w-screen-lg
-            lg:max-w-screen-xl
-            xl:max-w-screen-xl
-    }
+  .container {
+    @apply mx-auto xl:px-32 max-xl:px-4 max-sm:px-6 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-xl;
+  }
 }
 
 @layer components {
-    .header{
-        @apply
-            fixed
-            top-0
-            w-full
-            h-24
-            max-sm:h-20
-            z-50
-            transition-all
-            bg-transparent
-            border-b
-            border-transparent
-    }
+  .header {
+    @apply fixed top-0 w-full h-24 max-sm:h-20 z-50 transition-all bg-transparent border-b border-transparent;
+  }
 
-    .header.sticky-header{
-        @apply
-            border-default
-            h-16
-            max-sm:h-16
-            backdrop-filter
-            backdrop-saturate-150
-            backdrop-blur-sm
-            shadow-2xl
-            bg-[rgba(0,0,0,.6)]
-    }
+  .header.sticky-header {
+    @apply border-default h-16 max-sm:h-16 backdrop-filter backdrop-saturate-150 backdrop-blur-sm shadow-2xl bg-[rgba(0,0,0,.6)];
+  }
 
-    .navbar{
-        @apply
-            flex
-            gap-4
-            items-center
-            max-lg:hidden
-    }
+  .navbar {
+    @apply flex gap-4 items-center max-lg:hidden;
+  }
 
-    .navbar a{
-        @apply 
-            transition
-            px-1
-            py-1
-            text-sm
-            font-medium
-            opacity-60
-            hover:opacity-100
-            lg:px-2
-    }
+  .navbar a {
+    @apply transition px-1 py-1 text-sm font-medium opacity-60 hover:opacity-100 lg:px-2;
+  }
 
-    .header-btn{
-        @apply 
-            py-2
-            px-4
-            flex
-            items-center
-            max-lg:hidden
-            transition
-            opacity-70
-            hover:opacity-100
-            text-sm
-            before:opacity-100
-            before:content-['']
-            before:w-3
-            before:h-3
-            before:rounded-full
-            before:mr-2
-            before:bg-white
-    }
+  .header-btn {
+    @apply py-2 px-4 flex items-center max-lg:hidden transition opacity-70 hover:opacity-100 text-sm before:opacity-100 before:content-[''] before:w-3 before:h-3 before:rounded-full before:mr-2 before:bg-white;
+  }
 
-    .hero-btn{
-        @apply
-            flex
-            items-center
-            max-w-max
-            mx-auto
-            mt-10
-            text-base
-            bg-white
-            text-black
-            font-medium
-            py-3
-            px-8
-            rounded-full
-            max-lg:mt-6
-            max-lg:py-2
-            max-lg:px-4
-            max-lg:text-sm
-    }
+  .hero-btn {
+    @apply flex items-center max-w-max mx-auto mt-10 text-base bg-white text-black font-medium py-3 px-8 rounded-full max-lg:mt-6 max-lg:py-2 max-lg:px-4 max-lg:text-sm;
+  }
 
-    .mobile-sidebar{
-        @apply
-            lg:hidden
-            max-lg:flex
-            fixed
-            -right-full
-            top-0
-            bg-[rgba(52,51,51,0.9)]
-            backdrop-blur-sm
-            h-full
-            flex-col
-            z-[150]
-            w-60
-            justify-center
-            items-start
-            p-4
-            transition-all
-    }
+  .mobile-sidebar {
+    @apply lg:hidden max-lg:flex fixed -right-full top-0 bg-[rgba(52,51,51,0.9)] backdrop-blur-sm h-full flex-col z-[150] w-60 justify-center items-start p-4 transition-all;
+  }
 
-    .mobile-sidebar a{
-        @apply
-            w-full
-            py-3
-    }
-    
-    .mobile-sidebar.sidebar-show{
-        @apply
-            right-0
-    }
-    
-    .mobile-sidebar .sidebar-close{
-        @apply
-            lg:hidden
-            absolute
-            top-4
-            right-3
-            px-4
-            py-3
-            cursor-pointer
-            text-white
-    }
-    
-    .sidebar-backdrop{
-        @apply
-            lg:hidden
-            bg-[rgba(48,48,48,0.45)]
-            fixed
-            top-0
-            left-0
-            right-0
-            w-[100vw]
-            h-[100vh]
-            z-[140]
-            transition-all
-            opacity-0
-            pointer-events-none
-    }
-    
-    .mobile-sidebar.sidebar-show + .sidebar-backdrop{
-        @apply
-            lg:hidden
-            pointer-events-auto
-            opacity-100
-    }
+  .mobile-sidebar a {
+    @apply w-full py-3;
+  }
 
-    .table-title{
-        @apply
-            px-4
-            py-4
-            font-medium
-            text-left
-            text-lg
-            border-l
-            border-default
-            border-t-0
-            cursor-pointer
-    }
+  .mobile-sidebar.sidebar-show {
+    @apply right-0;
+  }
 
-    .table-title:nth-of-type(1){
-        @apply
-            border-0
-    }
+  .mobile-sidebar .sidebar-close {
+    @apply lg:hidden absolute top-4 right-3 px-4 py-3 cursor-pointer text-white;
+  }
 
-    .table-title-inner{
-        @apply
-            flex
-            items-center
-            gap-2
-    }
+  .sidebar-backdrop {
+    @apply lg:hidden bg-[rgba(48,48,48,0.45)] fixed top-0 left-0 right-0 w-[100vw] h-[100vh] z-[140] transition-all opacity-0 pointer-events-none;
+  }
 
-    .table-item{
-        @apply
-            max-sm:flex
-            max-sm:flex-col
-            max-sm:py-2
-            max-sm:border
-            max-sm:border-default
-            max-sm:rounded-3xl
-    }
+  .mobile-sidebar.sidebar-show + .sidebar-backdrop {
+    @apply lg:hidden pointer-events-auto opacity-100;
+  }
 
-    .table-item .table-item-col{
-        @apply
-            flex
-            flex-col
-            px-6
-            py-4
-            sm:table-cell
-            sm:py-8
-            lg:table-cell
-    }
+  .table-title {
+    @apply px-4 py-4 font-medium text-left text-lg border-l border-default border-t-0 cursor-pointer;
+  }
 
-    .table-item .table-item-col[data-label]{
-        @apply
-            before:content-[attr(data-label)]
-            sm:before:content-none
-            before:text-xs
-            before:uppercase
-            before:text-zinc-400
-            before:block
-            before:mb-2
-    }
+  .table-title:nth-of-type(1) {
+    @apply border-0;
+  }
 
-    .asc-icon{
-        @apply
-            relative
-            inline-block
-            before:content-['']
-            before:absolute
-            before:left-[2px]
-            before:w-[8px]
-            before:h-[20px]
-            before:bg-primary
-            before:opacity-70
-    }
+  .table-title-inner {
+    @apply flex items-center gap-2;
+  }
 
-    .desc-icon{
-        @apply
-            relative
-            inline-block
-            before:content-['']
-            before:absolute
-            before:right-[2px]
-            before:w-[8px]
-            before:h-[20px]
-            before:bg-primary
-            before:opacity-70
-    }
+  .table-item {
+    @apply max-sm:flex max-sm:flex-col max-sm:py-2 max-sm:border max-sm:border-default max-sm:rounded-3xl;
+  }
 
-    .pagination-prev-btn,
-    .pagination-next-btn{
-        @apply
-            px-3
-            py-2
-            text-sm
-            disabled:opacity-30
-            disabled:cursor-not-allowed
-    }
-    
-    .pagination-btn{
-        @apply
-            px-5
-            py-2
-            rounded-lg
-            border
-            border-zinc-800
-            hover:bg-zinc-900
-    }
+  .table-item .table-item-col {
+    @apply flex flex-col px-6 py-4 sm:table-cell sm:py-8 lg:table-cell;
+  }
 
-    .pagination-btn.active{
-        @apply
-            bg-secondary
-    }
+  .table-item .table-item-col[data-label] {
+    @apply before:content-[attr(data-label)] sm:before:content-none before:text-xs before:uppercase before:text-zinc-400 before:block before:mb-2;
+  }
 
-    .rows-select{
-        @apply
-            bg-secondary
-            text-sm 
-            border
-            border-zinc-800
-            p-2
-            rounded-lg
-            cursor-pointer
-            outline-none
-    }
+  .asc-icon {
+    @apply relative inline-block before:content-[''] before:absolute before:left-[2px] before:w-[8px] before:h-[20px] before:bg-primary before:opacity-70;
+  }
 
-    .statistic-item{
-        @apply
-            col-span-3
-            flex
-            flex-col
-            gap-2
-            items-center
-            border-default
-            lg:border-l
-            first-of-type:border-none
-            max-lg:even:border-l
-            max-sm:border-none
-            py-4
-    }
+  .desc-icon {
+    @apply relative inline-block before:content-[''] before:absolute before:right-[2px] before:w-[8px] before:h-[20px] before:bg-primary before:opacity-70;
+  }
 
-    .toast-btn{
-        @apply
-            border
-            border-default
-            py-2
-            px-4
-            mt-4
-            ml-4
-            rounded-md
-            hover:bg-zinc-800
-    }
+  .pagination-prev-btn,
+  .pagination-next-btn {
+    @apply px-3 py-2 text-sm disabled:opacity-30 disabled:cursor-not-allowed;
+  }
+
+  .pagination-btn {
+    @apply px-5 py-2 rounded-lg border border-zinc-800 hover:bg-zinc-900;
+  }
+
+  .pagination-btn.active {
+    @apply bg-secondary;
+  }
+
+  .rows-select {
+    @apply bg-secondary text-sm  border border-zinc-800 p-2 rounded-lg cursor-pointer outline-none;
+  }
+
+  .statistic-item {
+    @apply col-span-3 flex flex-col gap-2 items-center border-default lg:border-l first-of-type:border-none max-lg:even:border-l max-sm:border-none py-4;
+  }
+
+  .toast-btn {
+    @apply border border-default py-2 px-4 mt-4 ml-4 rounded-md hover:bg-zinc-800;
+  }
 }

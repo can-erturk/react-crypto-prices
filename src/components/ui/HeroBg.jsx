@@ -1,4 +1,4 @@
-import { TfiMouse } from "react-icons/tfi"
+import { TfiMouse } from 'react-icons/tfi'
 
 function HeroBg() {
   return (

@@ -1,18 +1,18 @@
-import { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
-import { setCurrentPage, setSortConfig, setSortedData } from "~/stores/table"
-import SortingIcon from "~/components/DataTable/ui/SortingIcon"
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { setCurrentPage, setSortConfig, setSortedData } from '~/stores/table'
+import SortingIcon from '~/components/DataTable/ui/SortingIcon'
 
 function Sorting() {
   const dispatch = useDispatch()
 
   // Get states
-  const { prices } = useSelector(state => state.crypto)
-  const { sortConfig } = useSelector(state => state.table)
+  const { prices } = useSelector((state) => state.crypto)
+  const { sortConfig } = useSelector((state) => state.table)
 
   // Copy data for sorting
   const sortedData = [...prices]
-  
+
   // Perform sorting
   if (sortConfig.key) {
     sortedData.sort((a, b) => {
@@ -44,7 +44,10 @@ function Sorting() {
   // Update sorted data when sort config changes
   useEffect(() => {
     dispatch(setSortedData(sortedData))
-  }, [prices, sortConfig])
+
+    // Eslint says that we should add sortedData to the dependencies array
+    // But it will cause an infinite loop. So, we will ignore it
+  }, [dispatch, prices, sortConfig])
 
   return (
     <tr>
@@ -60,13 +63,19 @@ function Sorting() {
           <SortingIcon id="current_price" />
         </div>
       </th>
-      <th className="table-title sm:text-right sm:pr-6" onClick={() => requestSort('price_change_percentage_24h')}>
+      <th
+        className="table-title sm:text-right sm:pr-6"
+        onClick={() => requestSort('price_change_percentage_24h')}
+      >
         <div className="table-title-inner sm:justify-end">
           <SortingIcon id="price_change_percentage_24h" />
           <span>24h %</span>
         </div>
       </th>
-      <th className="table-title sm:text-right sm:pr-6" onClick={() => requestSort('market_cap')}>
+      <th
+        className="table-title sm:text-right sm:pr-6"
+        onClick={() => requestSort('market_cap')}
+      >
         <div className="table-title-inner sm:justify-end">
           <SortingIcon id="market_cap" />
           <span>Market Cap</span>

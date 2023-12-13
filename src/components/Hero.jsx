@@ -1,5 +1,5 @@
-import { FaAngleRight } from "react-icons/fa"
-import HeroBg from "~/components/ui/HeroBg"
+import { FaAngleRight } from 'react-icons/fa'
+import HeroBg from '~/components/ui/HeroBg'
 
 function Hero() {
   return (

@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   currentPage: 1,
-  sortConfig: { key: "market_cap", direction: 'desceding' },
+  sortConfig: { key: 'market_cap', direction: 'desceding' },
   sortedData: [],
   paginatedData: [],
   itemsPerPage: 10,
 }
 
 const table = createSlice({
-  name: "table",
+  name: 'table',
   initialState,
   reducers: {
     setCurrentPage: (state, action) => {

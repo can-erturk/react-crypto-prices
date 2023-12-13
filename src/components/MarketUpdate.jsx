@@ -1,12 +1,11 @@
-import { useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { setPricesThunk } from "~/stores/prices"
-import Table from "~/components/DataTable/Table"
-import SectionTitle from "~/components/ui/SectionTitle"
-import SectionVideo from "~/components/ui/SectionVideo"
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { setPricesThunk } from '~/stores/prices'
+import Table from '~/components/DataTable/Table'
+import SectionTitle from '~/components/ui/SectionTitle'
+import SectionVideo from '~/components/ui/SectionVideo'
 
 function MarketUpdate() {
-
   const dispatch = useDispatch()
 
   // Get prices from API and set them to the store
@@ -25,7 +24,6 @@ function MarketUpdate() {
         />
 
         <Table />
-
       </div>
     </section>
   )
