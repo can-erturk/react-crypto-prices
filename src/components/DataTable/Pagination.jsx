@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { setCurrentPage, setPaginatedData } from "~/stores/table"
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6"
+import { scrollToTable } from "~/helpers/scrollToTable"
 
 function Pagination() {
   const dispatch = useDispatch()
@@ -11,7 +12,6 @@ function Pagination() {
 
   // Default constants
   const totalPages = Math.ceil(sortedData.length / itemsPerPage)
-  const marketUpdate = document.getElementById('marketUpdate')
 
   // Update paginated data
   useEffect(() => {
@@ -22,21 +22,10 @@ function Pagination() {
     dispatch(setPaginatedData(paginatedData))
   }, [dispatch, sortedData, currentPage, itemsPerPage])
 
-  // Helper function to scroll to top the market update section
-  const scrollToMarketUpdate = () => {
-    window.scrollTo({
-      top: marketUpdate.offsetTop - 80,
-      behavior: "smooth",
-    })
-  }
-
   // Helper function to set the page
   const setPage = (page) => {
-    // Set the new page
     dispatch(setCurrentPage(page))
-
-    // Scroll to top the market update section
-    scrollToMarketUpdate()
+    scrollToTable()
   }
 
   // Go to the previous page
