@@ -12,7 +12,7 @@ function Table() {
 
   return (
     <div id="marketUpdate">
-      <div className="bg-primary sm:border sm:border-default sm:rounded-3xl sm:overflow-hidden">
+      <div className="bg-primary sm:border sm:border-default sm:rounded-3xl sm:overflow-hidden shadow-[0px_0px_120px_60px_black]">
         <table className="w-full striped">
           <thead className="hidden border-b border-default sm:table-header-group">
             <Sorting></Sorting>

@@ -4,6 +4,7 @@ import { setPricesThunk } from '~/stores/prices'
 import Table from '~/components/DataTable/Table'
 import SectionTitle from '~/components/ui/SectionTitle'
 import SectionVideo from '~/components/ui/SectionVideo'
+import MarketUpdateBg from './ui/MarketUpdateBg'
 
 function MarketUpdate() {
   const dispatch = useDispatch()
@@ -14,7 +15,9 @@ function MarketUpdate() {
   }, [dispatch])
 
   return (
-    <section id="market-update" className="border-none py-0">
+    <section id="market-update" className="border-none py-0 relative">
+      <MarketUpdateBg />
+
       <div className="container overflow-hidden rounded-3xl py-28 max-sm:py-12 pb-44 border-none border-default relative">
         <SectionVideo src="/videos/react.mp4" />
 
