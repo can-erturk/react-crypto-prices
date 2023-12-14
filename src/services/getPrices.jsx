@@ -1,7 +1,7 @@
 import axios from 'axios'
 import showToast from '~/helpers/showToast'
 
-const baseURL = 'https://api.coingecko.com/api/v3d'
+const baseURL = 'https://api.coingecko.com/api/v3'
 const api = axios.create({ baseURL })
 
 async function getMockPrices() {
