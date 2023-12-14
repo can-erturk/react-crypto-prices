@@ -4,7 +4,7 @@ import TopCoins from '~/components/TopCoins'
 import MarketUpdate from '~/components/MarketUpdate'
 import Footer from '~/components/Footer'
 import Sidebar from '~/components/Sidebar'
-import MarketStatistics from '~/components/MarketStatistics'
+import WhyUs from './components/WhyUs'
 import DownloadNow from '~/components/DownloadNow'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -17,7 +17,7 @@ function App() {
       <Hero></Hero>
       <TopCoins></TopCoins>
       <MarketUpdate></MarketUpdate>
-      <MarketStatistics></MarketStatistics>
+      <WhyUs></WhyUs>
       <DownloadNow></DownloadNow>
       <Footer></Footer>
 
