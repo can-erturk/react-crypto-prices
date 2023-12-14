@@ -1,6 +1,7 @@
 import showToast from '~/helpers/showToast'
 import SectionTitle from './ui/SectionTitle'
 import { FaAngleRight } from 'react-icons/fa'
+import SectionLighting from './ui/SectionLighting'
 
 function DownloadNow() {
   // Function for handling demo alerts when buttons are clicked
@@ -8,8 +9,9 @@ function DownloadNow() {
 
   return (
     <section id="download-now" className="py-0">
-      {/* <div className="container"> */}
-      <div className="container overflow-hidden rounded-3xl py-44 max-sm:py-24 border-none border-default relative">
+      <div className="container overflow-hidden rounded-3xl pt-28 pb-36 max-sm:py-24 relative">
+        <SectionLighting />
+
         <SectionTitle
           title="Download Now"
           description="If you wish to download the app, you can start a subscription or try it for free with the buttons below."
