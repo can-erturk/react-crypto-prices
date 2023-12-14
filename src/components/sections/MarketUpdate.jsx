@@ -4,7 +4,7 @@ import { setPricesThunk } from '~/stores/prices'
 import Table from '~/components/DataTable/Table'
 import SectionTitle from '~/components/ui/SectionTitle'
 import SectionVideo from '~/components/ui/SectionVideo'
-import MarketUpdateBg from './ui/MarketUpdateBg'
+import MarketUpdateBg from '~/components/ui/MarketUpdateBg'
 
 function MarketUpdate() {
   const dispatch = useDispatch()

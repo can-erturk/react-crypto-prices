@@ -1,7 +1,7 @@
 import showToast from '~/helpers/showToast'
-import SectionTitle from './ui/SectionTitle'
+import SectionTitle from '~/components/ui/SectionTitle'
 import { FaAngleRight } from 'react-icons/fa'
-import SectionLighting from './ui/SectionLighting'
+import SectionLighting from '~/components/ui/SectionLighting'
 
 function DownloadNow() {
   // Function for handling demo alerts when buttons are clicked

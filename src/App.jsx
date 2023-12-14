@@ -1,25 +1,25 @@
-import Header from '~/components/Header'
-import Hero from '~/components/Hero'
-import TopCoins from '~/components/TopCoins'
-import MarketUpdate from '~/components/MarketUpdate'
-import Footer from '~/components/Footer'
-import Sidebar from '~/components/Sidebar'
-import WhyUs from './components/WhyUs'
-import DownloadNow from '~/components/DownloadNow'
+import Header from '~/components/layout/Header'
+import Footer from '~/components/layout/Footer'
+import Sidebar from '~/components/layout/Sidebar'
+import Hero from '~/components/sections/Hero'
+import TopCoins from '~/components/sections/TopCoins'
+import MarketUpdate from '~/components/sections/MarketUpdate'
+import WhyUs from './components/sections/WhyUs'
+import DownloadNow from '~/components/sections/DownloadNow'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <Sidebar></Sidebar>
-      <Hero></Hero>
-      <TopCoins></TopCoins>
-      <MarketUpdate></MarketUpdate>
-      <WhyUs></WhyUs>
-      <DownloadNow></DownloadNow>
-      <Footer></Footer>
+      <Header />
+      <Sidebar />
+      <Hero />
+      <TopCoins />
+      <MarketUpdate />
+      <WhyUs />
+      <DownloadNow />
+      <Footer />
 
       <ToastContainer
         hideProgressBar={true}

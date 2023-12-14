@@ -15,7 +15,7 @@ function Table() {
       <div className="bg-primary sm:border sm:border-default sm:rounded-3xl sm:overflow-hidden shadow-[0px_0px_120px_60px_black]">
         <table className="w-full striped">
           <thead className="hidden border-b border-default sm:table-header-group">
-            <Sorting></Sorting>
+            <Sorting />
           </thead>
           <tbody className="max-sm:flex max-sm:flex-col max-sm:gap-6 max-sm:mt-2">
             {paginatedData.map((coin, index) => (
@@ -40,8 +40,8 @@ function Table() {
         )}
       </div>
       <div className="flex items-center justify-between pt-12 max-sm:flex-col max-sm:gap-8">
-        <RowsPerPage></RowsPerPage>
-        <Pagination></Pagination>
+        <RowsPerPage />
+        <Pagination />
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
-import SectionTitle from './ui/SectionTitle'
-import SectionVideo from './ui/SectionVideo'
-import WhyUsItem from './ui/WhyUsItem'
+import SectionTitle from '~/components/ui/SectionTitle'
+import SectionVideo from '~/components/ui/SectionVideo'
+import WhyUsItem from '~/components/ui/WhyUsItem'
 
 import { BsFillShieldLockFill } from 'react-icons/bs'
 import { GiReceiveMoney } from 'react-icons/gi'

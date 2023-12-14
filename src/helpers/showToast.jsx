@@ -1,59 +1,45 @@
 import { toast } from 'react-toastify'
 
-/*
-  Variables used to show error messages only once
-  <React.StrictMode> causes the toast to be shown twice
-*/
-let axiosErrorShown = false
-let apiErrorShown = JSON.parse(localStorage.getItem('apiErrorShown')) || false
+const setApiErrorShown = () => {
+  localStorage.setItem('apiErrorShown', true)
+}
 
-// Toast message for demo features
+// Demo features
 const demoAlert = () => {
   toast.info('This is a demo feature and is currently unavailable.')
 }
 
-// Toast message for Axios errors
+// Axios error
 const axiosError = () => {
-  // Show error message only once
-  if (axiosErrorShown) return
-  axiosErrorShown = true
-
-  // Showing toast
   toast.error(
-    "An unknown error occurred and the data couldn't be fetched. Please check the browser console for more.",
+    <>
+      <p className="text-sm block ml-2">
+        An unknown error occurred and the data couldn't be fetched. Please check
+        the browser console for more.
+      </p>
+    </>,
     {
       autoClose: false,
     },
   )
 }
 
-// Toast message for API errors
+// CoinGecko API error
 const apiError = () => {
-  // Show error message only once
-  if (apiErrorShown) return
-  apiErrorShown = true
-
-  // Showing toast
   toast.error(
     <>
-      <span className="text-sm">
-        Outdated data is being displayed due to an invalid response from the
-        API.
-      </span>
-      <div className="text-xs">
-        <span>Error code: 429</span>
-        <button
-          className="toast-btn"
-          onClick={() => localStorage.setItem('apiErrorShown', true)}
-        >
-          Dont show again
-        </button>
-      </div>
+      <p className="text-sm block ml-2">Invalid response from the API.</p>
+      <p className="text-sm block ml-2">Error code: 429</p>
+      <button
+        className="border border-default py-2 px-4 rounded-md hover:bg-zinc-800 text-xs block ml-auto mt-4"
+        onClick={setApiErrorShown}
+      >
+        Dont show again
+      </button>
     </>,
   )
 }
 
-// Export all toast messages as a single object
 const showToast = {
   demoAlert,
   axiosError,

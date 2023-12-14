@@ -137,8 +137,4 @@
   .statistic-item {
     @apply col-span-3 flex flex-col gap-2 items-center border-default lg:border-l first-of-type:border-none max-lg:even:border-l max-sm:border-none py-4;
   }
-
-  .toast-btn {
-    @apply border border-default py-2 px-4 mt-4 ml-4 rounded-md hover:bg-zinc-800;
-  }
 }

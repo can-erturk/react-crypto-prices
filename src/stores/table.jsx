@@ -30,9 +30,12 @@ const table = createSlice({
   },
 })
 
-export const { setCurrentPage } = table.actions
-export const { setSortConfig } = table.actions
-export const { setSortedData } = table.actions
-export const { setPaginatedData } = table.actions
-export const { setItemsPerPage } = table.actions
+export const {
+  setCurrentPage,
+  setSortConfig,
+  setSortedData,
+  setPaginatedData,
+  setItemsPerPage,
+} = table.actions
+
 export default table.reducer
