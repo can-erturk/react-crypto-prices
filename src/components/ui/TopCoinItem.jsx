@@ -8,7 +8,7 @@ function TopCoinItem({ name, image, price, change }) {
 
   return (
     <div className="bg-primary col-span-4 border border-default rounded-3xl p-6 pr-2 flex items-center gap-6 overflow-hidden">
-      <img src={image} className="w-10 h-10" />
+      <img src={image} className="w-10 h-10" alt={name + " coin logo."} />
       <div className="flex flex-col">
         <div className="font-normal text-xl max-sm:text-lg line-clamp-1">
           {name}

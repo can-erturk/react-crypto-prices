@@ -83,6 +83,7 @@ function Pagination() {
         className="pagination-prev-btn"
         disabled={disabledButtons.prev}
         onClick={goToPrevPage}
+        aria-label="Previous page"
       >
         <FaAngleLeft />
       </button>
@@ -101,6 +102,7 @@ function Pagination() {
         className="pagination-next-btn"
         disabled={disabledButtons.next}
         onClick={goToNextPage}
+        aria-label="Next page"
       >
         <FaAngleRight />
       </button>

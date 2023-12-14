@@ -40,18 +40,18 @@ function Footer() {
         </div>
 
         <div className="flex gap-2 flex-wrap">
-          <a
+          <span
             className="inline-block p-2 opacity-60 hover:underline cursor-pointer"
             onClick={demoAlertHandler}
           >
             Terms of Use
-          </a>
-          <a
+          </span>
+          <span
             className="inline-block p-2 opacity-60 hover:underline cursor-pointer"
             onClick={demoAlertHandler}
           >
             Privacy Policy
-          </a>
+          </span>
         </div>
       </div>
     </>

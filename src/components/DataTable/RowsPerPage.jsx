@@ -22,13 +22,15 @@ function RowsPerPage() {
 
   return (
     <div className="flex gap-4 items-center order-1 max-sm:order-2">
-      <label className="flex-shrink-0 text-sm font-medium">
+      <span id="row-label" className="flex-shrink-0 text-sm font-medium">
         Rows Per Page:
-      </label>
+      </span>
       <select
         className="rows-select"
+        id="rows-select"
         defaultValue={itemsPerPage}
         onChange={(e) => setNewItems(e.target.value)}
+        aria-labelledby="row-label"
       >
         <option value={5}>5</option>
         <option value={10}>10</option>
