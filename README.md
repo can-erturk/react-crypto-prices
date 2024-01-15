@@ -13,6 +13,11 @@ This project does not require you to have an API key to run it. As long as the A
 - The Coingecko APIs were used to fetch market data in this project.
 - This project was inspired by [here](https://coindom-crypto-search.vercel.app/) and developed to do it better. [Stefan Topalovic](https://stefantopalovic.com/) developed the mentioned project.
 
+## See on my portfolio
+
+See this project in my portfolio with this link:
+
+[https://canerturk.dev/project/react-crypto-prices](https://canerturk.dev/project/react-crypto-prices)
 
 ## Demo and preview
 
